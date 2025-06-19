@@ -1,7 +1,10 @@
 # Vue3 Simple Lightbox
 
-![Build](https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/test-build.yml/badge.svg)
-![Publish](https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/npm-publish.yml/badge.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+[![npm](https://img.shields.io/npm/v/vue3-simple-lightbox.svg?logo=npm&logoColor=CB3837)](https://www.npmjs.com/package/vue3-simple-lightbox)
+[![Build](https://img.shields.io/github/actions/workflow/status/tobiaswaelde/vue3-simple-lightbox/test-build.yml?label=build&logo=github)](https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/test-build.yml)
+[![Publish](https://img.shields.io/github/actions/workflow/status/tobiaswaelde/vue3-simple-lightbox/npm-publish.yml?label=publish&logo=github)](https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/npm-publish.yml)
+
 
 A simple lightbox component for [Vue](https://vuejs.org/).
 
