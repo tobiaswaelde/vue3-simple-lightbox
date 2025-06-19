@@ -1,0 +1,58 @@
+{
+  "version": "0.0.1",
+  "name": "vue3-simple-lightbox",
+  "description": "A simple lightbox component for Vue3",
+  "keywords": [
+    "vue",
+    "vue.js",
+    "image",
+    "lightbox",
+    "component"
+  ],
+  "author": {
+    "name": "Tobias Wälde",
+    "email": "tobias.waelde@gmail.com",
+    "url": "https://tobiaswaelde.com"
+  },
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/vue3-masonry.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:tobiaswaelde/vue3-simple-lightbox.git"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "build": "vite build",
+    "preversion": "npm run build",
+    "prepublishOnly": "npm run build",
+    "publish-package": "git push && git push --tags && npm publish --registry=https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.10",
+    "vue": "^3.5.17"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vue-tsc": "^2.2.10"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^4.1.10",
+    "vue": "^3.5.17"
+  },
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=9.0.0"
+  }
+}
