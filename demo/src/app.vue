@@ -14,7 +14,24 @@
       :ui="{
         // backdrop: 'bg-red-500',
       }"
-    />
+    >
+      <!-- <template #index="{ current, total, text }">
+        <div>
+          <pre>{{ current }}</pre>
+          <pre>{{ total }}</pre>
+          <pre>{{ text }}</pre>
+        </div>
+      </template> -->
+      <template #closeIcon>
+        <IconX class="size-6" />
+      </template>
+      <template #prevIcon>
+        <IconChevronLeft class="size-6" />
+      </template>
+      <template #nextIcon>
+        <IconChevronRight class="size-6" />
+      </template>
+    </Lightbox>
   </main>
 </template>
 
@@ -22,6 +39,7 @@
 import { ref } from 'vue';
 import { Lightbox, type LightboxItem } from '../../src/index';
 import '../../dist/vue3-simple-lightbox.css';
+import { IconChevronLeft, IconChevronRight, IconX } from '@tabler/icons-vue';
 
 type Item = LightboxItem & { id: string; src: string };
 
