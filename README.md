@@ -1,7 +1,7 @@
 # Vue3 Simple Lightbox
 
-![Build](https://github.com/<USER>/<REPO>/actions/workflows/test-build.yml/badge.svg)
-![Publish](https://github.com/<USER>/<REPO>/actions/workflows/publish.yml/badge.svg)
+![Build](https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/test-build.yml/badge.svg)
+![Publish](https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/npm-publish.yml/badge.svg)
 
 A simple lightbox component for [Vue](https://vuejs.org/).
 
