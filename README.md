@@ -1,14 +1,38 @@
 # Vue3 Simple Lightbox
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-[![npm](https://img.shields.io/npm/v/vue3-simple-lightbox.svg?logo=npm&logoColor=CB3837)](https://www.npmjs.com/package/vue3-simple-lightbox)
-[![Build](https://img.shields.io/github/actions/workflow/status/tobiaswaelde/vue3-simple-lightbox/test-build.yml?label=build&logo=github)](https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/test-build.yml)
-[![Publish](https://img.shields.io/github/actions/workflow/status/tobiaswaelde/vue3-simple-lightbox/npm-publish.yml?label=publish&logo=github)](https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/npm-publish.yml)
+<p align="left">
+  <a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge"></a>
+  <a href="https://www.npmjs.com/package/vue3-simple-lightbox"><img alt="npm" src="https://img.shields.io/npm/v/vue3-simple-lightbox.svg?logo=npm&logoColor=CB3837&style=for-the-badge"></a>
+  <a href="https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/test-build.yml"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/tobiaswaelde/vue3-simple-lightbox/test-build.yml?label=build&logo=github&style=for-the-badge"></a>
+  <a href="https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/npm-publish.yml"><img alt="Publish" src="https://img.shields.io/github/actions/workflow/status/tobiaswaelde/vue3-simple-lightbox/npm-publish.yml?label=publish&logo=github&style=for-the-badge"></a>
+</p>
 
 
 A simple lightbox component for [Vue](https://vuejs.org/).
 
-## Installation
+<p align="center">
+  <img src="./screenshots/preview.png" alt="Preview with caption & custom icons" />
+  <caption>Preview with caption & custom icons</caption>
+</p>
+
+## 📚 Table of Contents <!-- omit in toc -->
+
+- [✨ Features](#-features)
+- [📦 Installation](#-installation)
+- [🚀 Basic Usage](#-basic-usage)
+- [⚙️ Props](#️-props)
+- [🎯 Slots](#-slots)
+- [🎨 Theming](#-theming)
+
+## ✨ Features
+
+- 🖼️ Simple, customizable lightbox
+- 💅 Tailwind-friendly styling with full theming support
+- 🧩 Component-based API with custom slots
+- 🪶 Lightweight with almost zero dependencies
+- 📦 Works with Vite, Nuxt, and other modern Vue setups
+
+## 📦 Installation
 #### Install using yarn
 ```sh
 yarn add vue3-simple-lightbox
@@ -19,7 +43,7 @@ yarn add vue3-simple-lightbox
 npm install vue3-simple-lightbox
 ```
 
-## Basic Usage
+## 🚀 Basic Usage
 ```vue
 <template>
   <!-- shows a preview grid of the images. The clicked image will be opened in the lightbox. -->
@@ -79,14 +103,13 @@ const handleOpen = (value: number) => {
 </script>
 ```
 
-## API
 
-### Props
+## ⚙️ Props
 
-| Prop    | Default                 | Type                                         |
-| ------- | ----------------------- | -------------------------------------------- |
-| `ui`    | see [Theming](#theming) | `LightboxUiProps`                            |
-| `items` |                         | `LightboxItem[]` <br/> The items to display. |
+| Prop    | Type              | Description             |
+| ------- | ----------------- | ----------------------- |
+| `ui`    | `LightboxUiProps` | see [Theming](#theming) |
+| `items` | `LightboxItem[]`  | The items to display.   |
 
 #### LightboxItem
 You can define items in two different ways:
@@ -113,7 +136,8 @@ You can define items in two different ways:
 />
 ```
 
-### Slots
+## 🎯 Slots
+
 | Slot        | Type                                                |
 | ----------- | --------------------------------------------------- |
 | `index`     | `{ current: number; total: number; text: string; }` |
@@ -126,7 +150,8 @@ You can define items in two different ways:
 | `caption`   | `{ text: string; }`                                 |
 | `item`      | `{ item: LightboxItem; index: number; }`            |
 
-### Theming
+## 🎨 Theming
+
 ```ts
 const defaultUi: LightboxUiProps = {
   backdrop: 'fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-md select-none',
@@ -165,3 +190,18 @@ const defaultUi: LightboxUiProps = {
   },
 }
 ```
+
+## 🤝 Contributing <!-- omit in toc -->
+
+Contributions, issues, and feature requests are welcome!  
+Feel free to check [issues](https://github.com/tobiaswaelde/vue3-simple-lightbox/issues) and open a pull request.
+
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feat/something`)
+3. Commit your changes
+4. Push to the branch
+5. Open a PR
+
+## 📝 License <!-- omit in toc -->
+
+MIT © [Tobias Wäldle](https://github.com/tobiaswaelde)
