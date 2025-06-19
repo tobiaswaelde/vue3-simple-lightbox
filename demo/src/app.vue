@@ -5,34 +5,19 @@
         <img :src="item.src" alt="" class="aspect-video" />
       </button>
     </div>
-
-    <!-- <Lightbox :items="items" v-model:open="open" v-model:index="index" /> -->
-    <Lightbox
-      :items="items"
-      v-model:open="open"
-      v-model:index="index"
-      :ui="{
-        // backdrop: 'bg-red-500',
-      }"
-    >
-      <!-- <template #index="{ current, total, text }">
-        <div>
-          <pre>{{ current }}</pre>
-          <pre>{{ total }}</pre>
-          <pre>{{ text }}</pre>
-        </div>
-      </template> -->
-      <template #closeIcon>
-        <IconX class="size-6" />
-      </template>
-      <template #prevIcon>
-        <IconChevronLeft class="size-6" />
-      </template>
-      <template #nextIcon>
-        <IconChevronRight class="size-6" />
-      </template>
-    </Lightbox>
   </main>
+
+  <Lightbox :items="items" v-model:open="open" v-model:index="index">
+    <template #closeIcon>
+      <IconX class="size-6" />
+    </template>
+    <template #prevIcon>
+      <IconChevronLeft class="size-6" />
+    </template>
+    <template #nextIcon>
+      <IconChevronRight class="size-6" />
+    </template>
+  </Lightbox>
 </template>
 
 <script setup lang="ts">
