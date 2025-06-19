@@ -1,5 +1,9 @@
 # Vue3 Simple Lightbox
-A simple lightbox component for Vue3.
+
+![Build](https://github.com/<USER>/<REPO>/actions/workflows/test-build.yml/badge.svg)
+![Publish](https://github.com/<USER>/<REPO>/actions/workflows/publish.yml/badge.svg)
+
+A simple lightbox component for [Vue](https://vuejs.org/).
 
 ## Installation
 #### Install using yarn
