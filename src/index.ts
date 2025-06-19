@@ -1,14 +1,10 @@
-import { Plugin } from 'vue';
-import { SimpleLightboxPluginOptions } from './types/plugin-options';
-// types
-import { LightboxItem } from './types/item';
-import { LightboxUiProps } from './types/ui';
-// components
-import Lightbox from './core/simple-lightbox.vue';
+import type { Plugin } from 'vue';
+import type { LightboxPluginOptions } from './types/plugin-options';
+import Lightbox from './core/lightbox.vue';
 
 const Vue3SimpleLightbox: Plugin = {
-  install(app, options?: SimpleLightboxPluginOptions) {
-    app.component(options?.name ?? 'simple-lightbox', Lightbox);
+  install(app, options?: LightboxPluginOptions) {
+    app.component(options?.name ?? 'lightbox', Lightbox);
   },
 };
 
@@ -18,6 +14,6 @@ if (typeof window !== 'undefined') {
 }
 
 export default Vue3SimpleLightbox;
-export { LightboxItem, LightboxUiProps, Lightbox };
+export { Lightbox };
 export * from './types/index';
 export * from './core/index';

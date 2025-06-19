@@ -1,7 +1,7 @@
-export type SimpleLightboxPluginOptions = {
+export type LightboxPluginOptions = {
   /**
    * The name of the vue element.
-   * @default 'simple-lightbox'
+   * @default 'lightbox'
    */
   name?: string;
 };

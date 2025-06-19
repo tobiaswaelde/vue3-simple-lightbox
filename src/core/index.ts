@@ -1,1 +1,1 @@
-export { default as SimpleLightbox } from './simple-lightbox.vue';
+export { default as Lightbox } from './lightbox.vue';

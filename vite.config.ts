@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.ts',
-      name: 'Vue3Masonry',
-      fileName: (format) => `vue3-masonry.${format}.js`,
+      name: 'Vue3SimpleLightbox',
+      fileName: (format) => `vue3-simple-lightbox.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
@@ -17,6 +17,7 @@ export default defineConfig({
         },
       },
     },
+    cssCodeSplit: false,
   },
   plugins: [vue(), dts()],
 });
