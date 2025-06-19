@@ -1,38 +1,39 @@
+import { HTMLAttributes } from 'vue';
 import type { DeepPartial } from './util';
 
 export type LightboxUiProps = DeepPartial<{
-  backdrop: string;
+  backdrop: HTMLAttributes['class'];
   content: {
-    wrapper: string;
-    base: string;
+    wrapper: HTMLAttributes['class'];
+    base: HTMLAttributes['class'];
   };
   images: {
-    wrapper: string;
-    item: string;
-    img: string;
+    wrapper: HTMLAttributes['class'];
+    item: HTMLAttributes['class'];
+    img: HTMLAttributes['class'];
   };
   caption: {
-    wrapper: string;
-    text: string;
+    wrapper: HTMLAttributes['class'];
+    text: HTMLAttributes['class'];
   };
   index: {
-    wrapper: string;
-    base: string;
-    text: string;
+    wrapper: HTMLAttributes['class'];
+    base: HTMLAttributes['class'];
+    text: HTMLAttributes['class'];
   };
   close: {
-    wrapper: string;
-    base: string;
-    icon: string;
+    wrapper: HTMLAttributes['class'];
+    base: HTMLAttributes['class'];
+    icon: HTMLAttributes['class'];
   };
   prev: {
-    wrapper: string;
-    base: string;
-    icon: string;
+    wrapper: HTMLAttributes['class'];
+    base: HTMLAttributes['class'];
+    icon: HTMLAttributes['class'];
   };
   next: {
-    wrapper: string;
-    base: string;
-    icon: string;
+    wrapper: HTMLAttributes['class'];
+    base: HTMLAttributes['class'];
+    icon: HTMLAttributes['class'];
   };
 }>;

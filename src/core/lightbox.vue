@@ -68,21 +68,16 @@
 
 <script setup lang="ts">
 import '../assets/main.css';
-import { computed, ref, useTemplateRef } from 'vue';
+import { computed, ref } from 'vue';
 import type { LightboxUiProps, LightboxItem } from '../types';
 import Content from './content.vue';
 import ImageIndex from './image-index.vue';
 import Button from './button.vue';
 
 const props = defineProps<{
-  /**
-   * Object to overwrite the default UI components.
-   */
+  /** Object to overwrite the default UI components. */
   ui?: LightboxUiProps;
-
-  /**
-   * Array of items to display in the lightbox.
-   */
+  /** Array of items to display in the lightbox. */
   items: LightboxItem[];
 }>();
 
@@ -93,9 +88,7 @@ const open = defineModel<boolean>('open', { default: false });
 const index = defineModel<number>('index', { default: 0 });
 
 defineSlots<{
-  /**
-   * Displays the index of the current item and number of total items.
-   */
+  /** Custom image index rendering */
   index?: (props: {
     /** The current item index (0-based) */
     current: number;
@@ -104,25 +97,51 @@ defineSlots<{
     /** The text to display including divider */
     text: string;
   }) => void;
-  close?: (props: { click: () => void }) => void;
+  /** Custom close button rendering */
+  close?: (props: {
+    /** Function to call when the close button is clicked */
+    click: () => void;
+  }) => void;
+  /** Close button icon */
   closeIcon?: () => void;
-  prev?: (props: { visible: boolean; click: () => void }) => void;
+  /** Custom prev button rendering */
+  prev?: (props: {
+    /** Whether the prev button is visible */
+    visible: boolean;
+    /** Function to call when the prev button is clicked */
+    click: () => void;
+  }) => void;
+  /** Prev button icon */
   prevIcon?: () => void;
-  next?: (props: { visible: boolean; click: () => void }) => void;
+  /** Custom next button rendering */
+  next?: (props: {
+    /** Whether the next button is visible */
+    visible: boolean;
+    /** Function to call when the next button is clicked */
+    click: () => void;
+  }) => void;
+  /** Next button icon */
   nextIcon?: () => void;
-  caption?: (props: { text: string }) => void;
-  item?: (props: { item: LightboxItem; index: number }) => void;
+  /** Custom caption rendering */
+  caption?: (props: {
+    /** The caption text for the current item */
+    text: string;
+  }) => void;
+  /** Custom item rendering */
+  item?: (props: {
+    /** The current item being displayed */
+    item: LightboxItem;
+    /** The index of the current item */
+    index: number;
+  }) => void;
 }>();
 
 const content = ref<InstanceType<typeof Content>>();
 
-//#region computed values
 /** Visibility of the 'Prev' button */
 const prevButtonVisible = computed<boolean>(() => index.value > 0);
-
 /** Visibility of the 'Next' button */
 const nextButtonVisible = computed<boolean>(() => index.value < props.items.length - 1);
-//#endregion
 
 //#region actions
 const handleClose = () => {

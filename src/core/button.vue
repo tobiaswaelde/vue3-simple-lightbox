@@ -11,8 +11,11 @@
 </template>
 
 <script setup lang="ts">
+import { HTMLAttributes } from 'vue';
+
 const props = defineProps<{
-  class?: string;
+  /** Class to overwrite default button styles */
+  class?: HTMLAttributes['class'];
 }>();
 defineEmits<{
   (event: 'click', payload: MouseEvent): void;

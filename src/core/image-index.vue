@@ -13,12 +13,23 @@ import { computed } from 'vue';
 import { LightboxUiProps } from '../types';
 
 const props = defineProps<{
+  /** Object to overwrite the default UI components. */
   ui?: LightboxUiProps;
+  /** The current item index (0-based) */
   current: number;
+  /** The total number of items */
   total: number;
 }>();
 const slots = defineSlots<{
-  index?: (props: { current: number; total: number; text: string }) => void;
+  /** Custom image index rendering */
+  index?: (props: {
+    /** The current item index (0-based) */
+    current: number;
+    /** The total number of items */
+    total: number;
+    /** The text to display including divider */
+    text: string;
+  }) => void;
 }>();
 
 const text = computed<string>(() => {

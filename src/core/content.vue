@@ -51,12 +51,15 @@ import { computed, ref, useTemplateRef, watch } from 'vue';
 import type { LightboxItem, LightboxUiProps } from '../types';
 
 const props = defineProps<{
+  /** Object to overwrite the default UI components. */
   ui?: LightboxUiProps;
+  /** Array of items to display in the lightbox. */
   items: LightboxItem[];
 }>();
-const emit = defineEmits<{
+defineEmits<{
   (event: 'close', payload: MouseEvent): void;
 }>();
+/** The index of the current active item. */
 const index = defineModel<number>('index', { required: true });
 defineSlots<{
   item?: (props: { item: LightboxItem; index: number }) => void;
