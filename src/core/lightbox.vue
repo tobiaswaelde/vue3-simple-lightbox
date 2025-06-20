@@ -68,7 +68,7 @@
 
 <script setup lang="ts">
 import '../assets/main.css';
-import { computed, ref } from 'vue';
+import { computed, useTemplateRef } from 'vue';
 import type { LightboxUiProps, LightboxItem } from '../types';
 import Content from './content.vue';
 import ImageIndex from './image-index.vue';
@@ -136,7 +136,7 @@ defineSlots<{
   }) => void;
 }>();
 
-const content = ref<InstanceType<typeof Content>>();
+const content = useTemplateRef('content');
 
 /** Visibility of the 'Prev' button */
 const prevButtonVisible = computed<boolean>(() => index.value > 0);
