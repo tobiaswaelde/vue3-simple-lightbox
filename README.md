@@ -71,6 +71,7 @@ npm install vue3-simple-lightbox
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { IconChevronLeft, IconChevronRight, IconX } from '@tabler/icons-vue';
 
 import { Lightbox, type LightboxItem } from 'vue3-simple-lightbox';
 import 'vue3-simple-lightbox/vue3-simple-lightbox.css';
@@ -204,4 +205,4 @@ Feel free to check [issues](https://github.com/tobiaswaelde/vue3-simple-lightbox
 
 ## 📝 License <!-- omit in toc -->
 
-MIT © [Tobias Wäldle](https://github.com/tobiaswaelde)
+MIT © [Tobias Wälde](https://github.com/tobiaswaelde)
