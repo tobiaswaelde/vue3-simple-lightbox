@@ -2,7 +2,8 @@
 
 <p align="left">
   <a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge"></a>
-  <a href="https://www.npmjs.com/package/vue3-simple-lightbox"><img alt="npm" src="https://img.shields.io/npm/v/vue3-simple-lightbox.svg?logo=npm&logoColor=CB3837&style=for-the-badge"></a>
+  <a href="https://www.npmjs.com/package/vue3-simple-lightbox"><img alt="npm" src="https://img.shields.io/npm/v/vue3-simple-lightbox.svg?logo=npm&logoColor=CB3837&color=CB3837&style=for-the-badge"></a>
+    <a href="https://www.npmjs.com/package/vue3-simple-lightbox"><img alt="Downloads" src="https://img.shields.io/npm/dm/vue3-simple-lightbox.svg?style=for-the-badge&color=4CAF50&logo=npm"></a>
   <a href="https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/test-build.yml"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/tobiaswaelde/vue3-simple-lightbox/test-build.yml?label=build&logo=github&style=for-the-badge"></a>
   <a href="https://github.com/tobiaswaelde/vue3-simple-lightbox/actions/workflows/npm-publish.yml"><img alt="Publish" src="https://img.shields.io/github/actions/workflow/status/tobiaswaelde/vue3-simple-lightbox/npm-publish.yml?label=publish&logo=github&style=for-the-badge"></a>
 </p>
